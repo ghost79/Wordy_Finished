@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9T8-ie-eBj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="incorporate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flt-CE-bTR">
+                                <rect key="frame" x="73.5" y="194" width="267.5" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" name="WordColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo by Gauravdeep Singh Bansal on Unsplash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-WL-deN">
+                                <rect key="frame" x="77" y="826" width="287" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                <color key="textColor" name="CreditsColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OE-1f-KsN">
+                                <rect key="frame" x="128" y="574" width="158" height="35"/>
+                                <color key="backgroundColor" name="WordColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Give me a word">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="CreditsColor"/>
+                                    <color key="baseBackgroundColor" name="WordColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="wordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CqK-3p-25z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9T8-ie-eBj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1FZ-ny-qpI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="7Xj-WL-deN" secondAttribute="bottom" constant="20" id="1ek-u0-syZ"/>
+                            <constraint firstAttribute="bottom" secondItem="9T8-ie-eBj" secondAttribute="bottom" id="E5R-g0-q0z"/>
+                            <constraint firstItem="flt-CE-bTR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="bottom" multiplier="0.25" id="HfA-N6-x6u"/>
+                            <constraint firstItem="flt-CE-bTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQA-JA-1G2"/>
+                            <constraint firstItem="9T8-ie-eBj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q57-My-dEX"/>
+                            <constraint firstAttribute="trailing" secondItem="9T8-ie-eBj" secondAttribute="trailing" id="Td0-sI-PAq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Xj-WL-deN" secondAttribute="trailing" constant="30" id="Zl4-cI-ODk"/>
+                            <constraint firstItem="1OE-1f-KsN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="bottom" multiplier="0.66" id="oqz-Ko-L3x"/>
+                            <constraint firstItem="1OE-1f-KsN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWN-km-nID"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headingLabel" destination="flt-CE-bTR" id="FbM-XZ-55a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="4000" height="6000"/>
+        <namedColor name="CreditsColor">
+            <color red="0.94117647058823528" green="0.94901960784313721" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WordColor">
+            <color red="0.64313725490196083" green="0.0" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
