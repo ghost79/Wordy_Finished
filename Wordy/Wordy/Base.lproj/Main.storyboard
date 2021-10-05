@@ -33,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OE-1f-KsN">
-                                <rect key="frame" x="128" y="574" width="158" height="35"/>
+                                <rect key="frame" x="39" y="574" width="158" height="35"/>
                                 <color key="backgroundColor" name="WordColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -52,20 +52,42 @@
                                     <action selector="wordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CqK-3p-25z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIz-sD-vwl">
+                                <rect key="frame" x="217" y="574" width="108" height="35"/>
+                                <color key="backgroundColor" name="WordColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="My words">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" name="CreditsColor"/>
+                                    <color key="baseBackgroundColor" name="WordColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="WN4-tk-jN7" kind="presentation" identifier="listSegue" id="dHa-04-ORs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9T8-ie-eBj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1FZ-ny-qpI"/>
                             <constraint firstAttribute="bottomMargin" secondItem="7Xj-WL-deN" secondAttribute="bottom" constant="20" id="1ek-u0-syZ"/>
+                            <constraint firstItem="1OE-1f-KsN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-10" id="Bbe-KW-8GW"/>
                             <constraint firstAttribute="bottom" secondItem="9T8-ie-eBj" secondAttribute="bottom" id="E5R-g0-q0z"/>
                             <constraint firstItem="flt-CE-bTR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="bottom" multiplier="0.25" id="HfA-N6-x6u"/>
                             <constraint firstItem="flt-CE-bTR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQA-JA-1G2"/>
                             <constraint firstItem="9T8-ie-eBj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Q57-My-dEX"/>
                             <constraint firstAttribute="trailing" secondItem="9T8-ie-eBj" secondAttribute="trailing" id="Td0-sI-PAq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Xj-WL-deN" secondAttribute="trailing" constant="30" id="Zl4-cI-ODk"/>
+                            <constraint firstItem="uIz-sD-vwl" firstAttribute="centerY" secondItem="1OE-1f-KsN" secondAttribute="centerY" id="kdn-0E-tik"/>
                             <constraint firstItem="1OE-1f-KsN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="bottom" multiplier="0.66" id="oqz-Ko-L3x"/>
-                            <constraint firstItem="1OE-1f-KsN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWN-km-nID"/>
+                            <constraint firstItem="uIz-sD-vwl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="10" id="sz4-2t-UuB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -75,6 +97,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120" y="137"/>
+        </scene>
+        <!--Word Table View Controller-->
+        <scene sceneID="Z1T-R2-vWK">
+            <objects>
+                <tableViewController id="WN4-tk-jN7" customClass="WordTableViewController" customModule="Wordy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FTm-Vj-nlC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" id="hJq-XE-qpc">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hJq-XE-qpc" id="eCt-6N-c5K">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WN4-tk-jN7" id="9ZG-mq-dp9"/>
+                            <outlet property="delegate" destination="WN4-tk-jN7" id="ybW-ek-Prm"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5q-mM-17t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="137"/>
         </scene>
     </scenes>
     <resources>
